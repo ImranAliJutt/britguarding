@@ -1,0 +1,91 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Base Navbar Styling */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 2rem;
+    background: transparent;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Navbar when Scrolled */
+.navbar.scrolled {
+    background: linear-gradient(to right, hsl(248, 65%, 52%), hsl(251, 66%, 36%), hsl(255, 68%, 20%));
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+    color: white !important; /* Force white color for logo */
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+}
+
+.navbar-brand img {
+    max-height: 50px; /* Set maximum height for the logo */
+    margin-right: 10px; /* Add space between the logo and text */
+    display: inline-block;
+    vertical-align: middle; /* Align with text */
+    border-radius: 30px;
+}
+
+/* Navbar Links */
+.nav-link {
+    color: white !important; /* Force white color for links */
+    font-weight: 400;
+    margin: 20px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+/* Navbar Toggle Icon for Small Screens */
+.navbar-toggler {
+    background: linear-gradient(45deg, rgb(179, 80, 250), rgb(112, 89, 251) 50%, rgb(46, 207, 246)) 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+    font-family: Poppins, sans-serif;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Contact Button */
+.A-0 {
+    margin: 0px 0px 0px 50px;
+    padding: 10px 20px;
+    outline: none;
+    text-decoration: none;
+    transition-duration: 0.15s;
+    background: linear-gradient(45deg, rgb(172, 80, 239), rgb(112, 89, 251) 50%, rgb(46, 207, 246));
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    height: 35px;
+    letter-spacing: 1px;
+    line-height: 33px;
+    min-width: 100px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.A-0:hover {
+    background: linear-gradient(45deg, rgb(112, 89, 251), rgb(46, 207, 246), rgb(172, 80, 239));
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background: linear-gradient(to right, hsl(248, 65%, 52%), hsl(251, 66%, 36%), hsl(255, 68%, 20%));
+    }
+}
