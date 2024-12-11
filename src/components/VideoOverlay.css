@@ -1,0 +1,132 @@
+.video-carousel-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(20, 26, 40, 1), rgb(20, 26, 40, 0.8));
+  }
+  
+  .video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .main-text {
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: zoomAndFade 2s ease-in-out forwards; /* Add zoom and fade effect */
+  }
+  .main-text span {
+    color: hsl(248, 65%, 52%);
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .sub-text {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 40px; /* Add margin to create space for circles */
+    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0.3;
+  }
+  
+  .carousel-S {
+    position: absolute;
+    bottom: 30%; /* Adjust this to ensure the indicators are below the text */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correct centering */
+    display: flex;
+    justify-content: center; /* Ensures the indicators are aligned in the center */
+    gap: 15px; /* Adds space between the circles */
+    z-index: 3;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .carousel-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(66, 65, 65, 0.6); /* Default color for inactive indicators */
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-circle:hover {
+    background: rgba(255, 255, 255, 1); /* Color on hover */
+  }
+  
+  .carousel-circle.active {
+    background: #ffffff; /* Highlighted color for the active indicator */
+  }
+  .icon {
+    font-size: 4rem; /* Adjust size of the icon */
+    color: #ffffff; /* Icon color */
+    margin-bottom: 10px; /* Add some spacing below the icon */
+    animation: fadeIn 1.5s ease-in-out; /* Add animation if needed */
+    opacity: 0.1;
+  }
+  
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomAndFade {
+    0% {
+      opacity: 0;
+      transform: scale(0.8); /* Slightly smaller */
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.1); /* Slightly larger for dynamic effect */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* Back to normal */
+    }
+  }
+  
