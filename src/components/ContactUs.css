@@ -127,7 +127,7 @@ textarea {
     position: relative;
     z-index: 2;
     padding: 40px 20px;
-    background: linear-gradient(to right, hsl(248, 65%, 52%), hsl(251, 66%, 36%), hsl(255, 68%, 20%));
+    background: linear-gradient(to right, hsl(0, 0%, 0%), hsl(0, 0%, 1%), hsl(0, 0%, 0%));
     border-radius: 15px;
     color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -158,8 +158,8 @@ textarea {
 }
 
 .review-card {
-    background: linear-gradient(45deg, rgb(172, 80, 239), rgb(112, 89, 251), rgb(46, 207, 246));
-    color: white;
+    background:#FAFAFA;
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 20px;
     max-width: 300px;
@@ -188,7 +188,7 @@ textarea {
 .review-text {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(10, 10, 10, 0.9);
 }
 
 .review-author {

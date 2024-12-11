@@ -9,6 +9,8 @@
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    opacity: 1;
   }
   
   .video {
@@ -23,7 +25,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgb(20, 26, 40, 1), rgb(20, 26, 40, 0.8));
+    background: linear-gradient(to right, hsl(248, 65%, 52% , 0.9), hsl(251, 66%, 36%,0.9), hsl(255, 68%, 20%,0.9));
+    z-index: 1;
   }
   
   .video-text {
@@ -48,13 +51,16 @@
     color: hsl(248, 65%, 52%);
     font-weight: bold;
     animation: fadeIn 2s ease-in-out;
+    opacity: 1;
+    z-index: 3;
   }
   .sub-text {
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
     margin-bottom: 40px; /* Add margin to create space for circles */
     animation: fadeIn 1.5s ease-in-out;
-    opacity: 0.3;
+    opacity: 1;
+    z-index: 2;
   }
   
   .carousel-S {
@@ -90,7 +96,7 @@
     color: #ffffff; /* Icon color */
     margin-bottom: 10px; /* Add some spacing below the icon */
     animation: fadeIn 1.5s ease-in-out; /* Add animation if needed */
-    opacity: 0.1;
+    z-index: 2;
   }
   
   

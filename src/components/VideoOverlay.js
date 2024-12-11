@@ -13,15 +13,15 @@ const videos = [
   },
   {
     src: video2,
-    text: "Eyes on What Matters, <span>24/7</span>.",
+    text: "Eyes on What Matters, <span>24/7</span>",
   },
   {
     src: video3,
-    text: "Trained. Reliable. Always on <span>Guard</span>.",
+    text: "Trained. Reliable. Always on <span>Guard</span>",
   },
   {
     src: video4,
-    text: "Event Safety, Handled with <span>Precision</span>.",
+    text: "Event Safety, Handled with <span>Precision</span>",
   },
 ];
 
