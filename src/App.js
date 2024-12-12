@@ -9,6 +9,7 @@ import ContactUs from './components/ContactUs';
 import VideoOverlay from './components/VideoOverlay';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Map from './components/Map';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <ContactUs />
         <AboutUs />
         <Projects />
+        <Map />
         <Footer />
         <Routes>
           <Route path="/services" element={<Services />} />
@@ -29,6 +31,7 @@ function App() {
           <Route path="video" element={<VideoOverlay />} />
           <Route path="projects" element={<Projects />} />
           <Route path="footer" element={<Footer />} />
+          <Route path="map" element={<Map />} />
         </Routes>
       </div>
     </Router>
