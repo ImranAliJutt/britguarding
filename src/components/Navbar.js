@@ -49,15 +49,16 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li className="nav-item">
+                            <a className="nav-link" href="#about">
+                                Join us
+                            </a>
+                        </li>
+                        <li className="nav-item">
                             <a className="nav-link" href="#services">
                                 Services
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#contact">
-                                Contact
-                            </a>
-                        </li>
+                        
                     </ul>
                     <div className="contact-button-container">
                         <a href="/contact-us" className="A-0">Contact Us</a>

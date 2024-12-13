@@ -10,7 +10,7 @@ import VideoOverlay from './components/VideoOverlay';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Map from './components/Map';
-
+import TeamGrid from './components/TeamGrid';
 function App() {
   return (
     <Router>
@@ -18,10 +18,10 @@ function App() {
         <Navbar />
         <Header />
         <Services />
-        <VideoOverlay/>
         <ContactUs />
         <AboutUs />
         <Projects />
+        <TeamGrid />
         <Map />
         <Footer />
         <Routes>
@@ -32,6 +32,7 @@ function App() {
           <Route path="projects" element={<Projects />} />
           <Route path="footer" element={<Footer />} />
           <Route path="map" element={<Map />} />
+          <Route path="team" element={<TeamGrid />} />
         </Routes>
       </div>
     </Router>

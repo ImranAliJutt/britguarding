@@ -80,7 +80,7 @@ const Services = () => {
                     <i
                         className="fa-solid fa-bars-staggered"
                         style={{
-                            background: 'linear-gradient(to right, hsl(248, 65%, 52%), hsl(251, 66%, 36%), hsl(255, 68%, 20%))',
+                            background:' #3C3D37',
                             WebkitBackgroundClip: 'text',
                             color: 'transparent',
                         }}

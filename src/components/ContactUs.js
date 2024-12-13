@@ -1,102 +1,87 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import './ContactUs.css';
-import servicesBg from '../images/servicesbg.jpg';
-import review1 from '../images/review1.jpg';
 
 const ContactUs = () => {
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.2 }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
-
-    const reviews = [
-        { text: 'The team at BritGuarding is fantastic! Their professionalism and attention to detail are unmatched.', author: 'John Doe', image: review1 },
-        { text: "I felt safe and secure knowing BritGuarding was handling our event's security.", author: 'Jane Smith', image: review1 },
-        { text: 'Their customer service is top-notch, and they truly care about their clients.', author: 'Mike Johnson', image: review1 },
-    ];
-
     return (
-        <section className="contact-us" ref={sectionRef}>
-            <div className="contact-us-overlay"></div>
-            <div className="contact-us-content">
-                {/* Social Icons */}
-                <div className="social-icons">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <i className="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <i className="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <i className="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <i className="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-                <div className={`contact-us-container ${isVisible ? 'visible' : ''}`}>
-                    <h2 className={`contact-us-title ${isVisible ? 'visible' : ''}`}>
-                        <i
-                            className="fa-regular fa-envelope"
-                            style={{
-                                background: 'linear-gradient(to right, hsl(248, 65%, 52%), hsl(251, 66%, 36%), hsl(255, 68%, 20%))',
-                                WebkitBackgroundClip: 'text',
-                                color: 'transparent',
-                            }}
-                        ></i> Contact Us
-                    </h2>
-                    <p className={`contact-us-description ${isVisible ? 'visible' : ''}`}>
-                        We are here to assist you. Please fill out the form below or contact us directly using the information provided.
-                    </p>
-                    <form className={`contact-us-form ${isVisible ? 'visible' : ''}`}>
-                        <div className="form-group">
-                            <label htmlFor="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <section className="contact-section">
+            <div className="container">
+                <div className="row">
+                    {/* Left Column - Contact Information */}
+                    <div className="col-md-6 contact-info">
+                        <h2>GET IN TOUCH</h2>
+                        <p>
+    We're always on the lookout to collaborate with new clients and partners. Whether you need expert security solutions, customized services, or have a unique project in mind, our team is ready to assist. If you're interested in working with us, please get in touch through one of the following ways.
+</p>
+
+                        <div className="contact-details">
+                            <div className="detail-item">
+                                <i className="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>8014 Edith Blvd NE, Albuquerque, New York, United States</p>
+                                </div>
+                            </div>
+                            <div className="detail-item-row">
+                                <div className="detail-item">
+                                    <i className="fa-solid fa-phone"></i>
+                                    <div>
+                                        <h4>Phone</h4>
+                                        <p>(505) 792-2430</p>
+                                    </div>
+                                </div>
+                                <div className="detail-item">
+                                    <i className="fa-solid fa-envelope"></i>
+                                    <div>
+                                        <h4>Email</h4>
+                                        <p>demo@yourdomain.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="detail-item">
+                                <i className="fa-solid fa-clock"></i>
+                                <div>
+                                    <h4>Opening Hours</h4>
+                                    <p>
+                                        <strong>Mon - Fri:</strong> 9am - 5pm <br />
+                                        <strong>Sat - Sun:</strong> 9am - 2pm
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" className="contact-us-btn">Send Message</button>
-                    </form>
+
+                    </div>
+
+                    {/* Right Column - Contact Form */}
+                    <div className="col-md-6 contact-form">
+                        <h2>CONTACT US</h2>
+                        <form>
+                            <div className="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" placeholder="Enter your name" required />
+                            </div>
+                            <div className="form-row">
+                                <div className="form-group col">
+                                    <label>Email *</label>
+                                    <input type="email" placeholder="Enter your email" required />
+                                </div>
+                                <div className="form-group col">
+                                    <label>Phone Number</label>
+                                    <input type="tel" placeholder="Enter your phone number" />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label>Subject *</label>
+                                <input type="text" placeholder="Enter subject" required />
+                            </div>
+                            <div className="form-group">
+                                <label>Message *</label>
+                                <textarea placeholder="Enter your message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" className="send-btn">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <section className={`review-section ${isVisible ? 'visible' : ''}`}>
-                <h2 className="review-title">What Our Clients Say</h2>
-                <div className="reviews-container">
-                    {reviews.map((review, index) => (
-                        <div className={`review-card ${isVisible ? 'visible' : ''}`} key={index}>
-                            <img src={review.image} alt={`${review.author}`} className="review-image" />
-                            <p className="review-text">"{review.text}"</p>
-                            <p className="review-author">– {review.author}</p>
-                            <p className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
         </section>
     );
 };

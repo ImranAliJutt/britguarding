@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './AboutUs.css';
-import aboutUsImage from '../images/aboutus.jpg';
+import aboutUsImage from '../images/securitywomen.jpg';
 
 const AboutUs = () => {
     const [visible, setVisible] = useState(false);
@@ -73,15 +73,7 @@ const AboutUs = () => {
             <div className="about-us-container">
                 <div className="about-us-content">
                     <h2 className="about-us-title">
-                        <i
-                            className="fa-solid fa-people-group"
-                            style={{
-                                background: 'linear-gradient(to right, hsl(248, 65%, 52%), hsl(251, 66%, 36%), hsl(255, 68%, 20%))',
-                                WebkitBackgroundClip: 'text',
-                                color: 'transparent',
-                            }}
-                        ></i>{' '}
-                        About Us
+                    ABOUT US
                     </h2>
                     <p className="about-us-description">
                         At <strong>BritGuarding</strong>, we are dedicated to providing top-tier security services with a focus on professionalism, reliability, and innovation. Our team of highly trained experts is committed to ensuring the safety and well-being of our clients across various industries.
@@ -92,11 +84,11 @@ const AboutUs = () => {
                     <div className="about-us-metrics">
                         <div className="metric">
                             <h3>{counts.happyClients}</h3>
-                            <p>Happy Clients</p>
+                            <p>HAPPY CLIENTS</p>
                         </div>
                         <div className="metric">
                             <h3>{counts.projectsDone}</h3>
-                            <p>Projects Done</p>
+                            <p>PROJECTS DONE</p>
                         </div>
                     </div>
                     <button className="about-us-btn">Learn More</button>
