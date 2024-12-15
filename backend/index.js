@@ -1,16 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-    res.send('Backend is running successfully!');
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
 app.get('/api/test', (req, res) => {
-    res.json({ message: 'This is a test endpoint!' });
+  res.send({ message: 'API is working!' });
 });
 
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
